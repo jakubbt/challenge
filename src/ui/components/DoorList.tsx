@@ -50,6 +50,21 @@ const columns: GridColDef<Door>[] = [
       );
     },
   },
+  {
+    field: 'lastConnectionStatusUpdate',
+    headerName: 'Last connection status update',
+    flex: 2,
+
+    renderCell: (content) => {
+      return (
+        <Typography component="span">
+          {new Date(content.row.lastConnectionStatusUpdate).toLocaleString(
+            'sk',
+          )}
+        </Typography>
+      );
+    },
+  },
 ];
 
 export function DoorList({ doors }: DoorListProps) {

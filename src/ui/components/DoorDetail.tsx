@@ -32,6 +32,11 @@ export function DoorDetail({ door }: DoorDetailProps) {
           </Typography>
         )}
       </DetailPageItem>
+      <DetailPageItem label="Last connection status update">
+        <Typography>
+          {new Date(door.lastConnectionStatusUpdate).toLocaleString('sk')}
+        </Typography>
+      </DetailPageItem>
     </DetailPageContainer>
   );
 }
