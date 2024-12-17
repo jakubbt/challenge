@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { Door } from '@/models/Door';
 import { DataGrid, GridColDef, GridRowParams } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
+import { ConnectionStatus } from '../../models/ConnectionStatus';
 
 interface DoorListProps {
   doors: Door[];
@@ -33,11 +34,18 @@ const columns: GridColDef<Door>[] = [
     field: 'connectionStatus',
     headerName: 'Connection status',
     flex: 1,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    renderCell: ({ row: door }) => {
+    renderCell: (content) => {
+      if (content.row.connectionStatus === ConnectionStatus.Offline) {
+        return (
+          <Typography component="span" color="error.main">
+            {ConnectionStatus.Offline}
+          </Typography>
+        );
+      }
+
       return (
         <Typography component="span" color="success.main">
-          online
+          {ConnectionStatus.Online}
         </Typography>
       );
     },
