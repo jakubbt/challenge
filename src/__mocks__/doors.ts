@@ -10,6 +10,7 @@ export const doors: DoorDto[] = [
     connection_status: 'online',
     last_connection_status_update: '2023-02-22T03:00:11.853Z',
     building_id: buildings[0].id,
+    apartment_id: apartments[0].id,
   },
   {
     id: '63f4d87995adfc4869e6acab',
@@ -18,6 +19,7 @@ export const doors: DoorDto[] = [
     connection_status: 'online',
     last_connection_status_update: '2023-02-22T17:26:34.047Z',
     building_id: buildings[1].id,
+    apartment_id: apartments[0].id,
   },
   {
     id: '63f4d8a2b71f7f2324e59d2e',
@@ -26,6 +28,7 @@ export const doors: DoorDto[] = [
     connection_status: 'offline',
     last_connection_status_update: '2023-02-22T21:05:12.721Z',
     building_id: buildings[1].id,
+    apartment_id: apartments[0].id,
   },
   {
     id: '63f4d88662423b9c744bb2f8',
@@ -34,6 +37,7 @@ export const doors: DoorDto[] = [
     connection_status: 'online',
     last_connection_status_update: '2023-02-22T03:05:12.491Z',
     building_id: buildings[0].id,
+    apartment_id: apartments[0].id,
   },
   {
     id: '63f4d8a8e431d9664f409ca4',
